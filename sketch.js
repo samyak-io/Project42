@@ -5,11 +5,6 @@ var clock;
 function setup() {
   var canvas = createCanvas(400,400);
   
-  //Calculating time using predefined func from p5.js
-  hr = hour();
-  mn = minute();
-  sc = second();
-  
   //change the angle mode to degrees
   angleMode(DEGREES);
 }
@@ -19,6 +14,11 @@ function draw() {
   translate(width/2,height/2);
   rotate(-90);
 
+  //Calculating time using predefined func from p5.js
+  hr = hour();
+  mn = minute();
+  sc = second();
+  
   scAngle = map(sc, 0, 60, 0, 360); //use the map function to convert 0-60 secs in a min to 0-360 degree of a circle
   //draw the seconds hand
   push();
